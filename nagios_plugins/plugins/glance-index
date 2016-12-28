@@ -1,0 +1,4 @@
+#!/bin/env bash
+
+. /etc/nagios/keystonerc_admin
+echo "Image count: "`openstack image list | grep -v "^+" | grep -v "^| ID" | wc -l`
