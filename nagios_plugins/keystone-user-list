@@ -1,5 +1,0 @@
-#!/bin/env bash
-
-. /etc/nagios/keystonerc_admin
-echo "User count: "`openstack user list | grep -v "^+" | grep -v "^| ID" | egrep -v "neutron|glance|demo|nova|ceilometer|swift|cinder" | wc -l`
-

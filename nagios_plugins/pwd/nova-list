@@ -1,4 +1,0 @@
-#!/bin/env bash
-
-. /etc/nagios/keystonerc_admin
-echo "Instance count: "`openstack server list | grep -v "^+" | grep -v "| ID" | wc -l`
