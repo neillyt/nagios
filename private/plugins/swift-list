@@ -1,0 +1,4 @@
+#!/bin/env bash
+
+. /etc/nagios/keystonerc_admin
+echo "Container count: "`openstack container list | grep -v "^+" | grep -v "^| ID" | grep -v "" | wc -l`
